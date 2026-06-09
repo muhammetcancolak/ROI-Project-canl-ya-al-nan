@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoğraf Yükleme ve ROI Çizme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sol Panel -->
+        <div class="left-panel">
+            <div class="upload-box" id="uploadBox">
+                <p>Buraya fotoğrafınızı sürükleyin</p>
+                <img id="uploadedImage" src="" alt="">
+                <div id="pointsContainer"></div>
+            </div>
+            <div class="button-container">
+                <button id="uploadButton">Fotoğraf Ekle</button>
+            </div>
+        </div>
+
+        <!-- Sağ Panel -->
+        <div class="right-panel">
+            <div class="info-container">
+                <!-- Yeni Tip Ekle ve JSON İndir butonları -->
+                <div class="button-group-row">
+                    <button id="addNewType">Yeni Tip Ekle</button>
+                    <button id="downloadJson">JSON İndir</button>
+                </div>
+
+                <!-- ClassId, Reverse ve ROI Onayla butonlarını içeren çerçeve -->
+                <div class="frame-container">
+                    <div class="input-group">
+                        <label for="classIdInput">ClassId Girin (Virgülle ayırın):</label>
+                        <input type="text" id="classIdInput" placeholder="Örn: 1,2,3">
+                    </div>
+
+                    <div class="reverse-container">
+                        <input type="checkbox" id="reverseCheckbox">
+                        <label for="reverseCheckbox">Reverse</label>
+                    </div>
+
+                    <!-- ROI Onayla Butonu -->
+                    <button id="confirmROI">ROI Onayla</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
